@@ -15,6 +15,17 @@ public class Candidate {
     @Column(name = "candidate_name")
     private String name;
 
+    public int getNumberOfVotes() {
+        return numberOfVotes;
+    }
+
+    public void setNumberOfVotes(int numberOfVotes) {
+        this.numberOfVotes = numberOfVotes;
+    }
+
+    @Column(name = "votes")
+    private int numberOfVotes;
+
     public Candidate() {
     }
 

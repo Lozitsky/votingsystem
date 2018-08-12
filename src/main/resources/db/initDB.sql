@@ -14,5 +14,6 @@ CREATE TABLE citizens
 CREATE TABLE candidates
 (
   id INTEGER PRIMARY KEY DEFAULT nextval('global_seq'),
-  candidate_name VARCHAR NOT NULL
+  candidate_name VARCHAR NOT NULL,
+  votes INTEGER
 )

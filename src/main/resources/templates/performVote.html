@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>performVote</title>
 </head>
 <body>
 
-performVote
+<!--/*@thymesVar id="candidates" type="List<com.kirilo.votingsystem.entity.Candidate>"*/-->
+<div th:each="candidate : ${candidates}">
+Click to vote for:
+<a th:href="@{/voteFor(id=${candidate.id})}" th:text="${candidate.name}"></a>
+
+</div>
 
 </body>
 </html>
